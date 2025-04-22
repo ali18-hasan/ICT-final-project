@@ -15,7 +15,7 @@ body {
 
 /* Header and Navigation Bar */
 header {
-    background-color: #000; /* Changed header background to black */
+    background-color: #003e74; /* Example ICL-like blue */
     color: #fff;
     padding: 1rem 0;
     position: sticky; /* Makes navbar stick to top */
@@ -55,7 +55,7 @@ header {
 
 .navbar ul li a:hover,
 .navbar ul li a:focus {
-    background-color: #333; /* Adjusted hover color for black background */
+    background-color: #005a9c; /* Slightly lighter blue on hover */
     border-radius: 4px;
 }
 
@@ -75,7 +75,7 @@ main {
 }
 
 h1, h2 {
-    color: #003e74; /* Kept heading color as original blue for accent */
+    color: #003e74; /* Match header blue */
     margin-bottom: 15px;
 }
 
