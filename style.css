@@ -1,25 +1,166 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header and Navigation Bar */
+header {
+    background-color: #003e74; /* Example ICL-like blue */
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky; /* Makes navbar stick to top */
+    top: 0;
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Pushes logo left, nav links right */
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto; /* Center the navbar content */
+    padding: 0 20px; /* Add padding on the sides */
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .navbar ul {
-    margin-top: 10px;
-    flex-direction: column;
-    width: 100%;
+    list-style: none;
+    display: flex;
 }
 
 .navbar ul li {
-    margin-left: 0;
-    margin-bottom: 5px;
-    width: 100%;
-    text-align: center;
+    margin-left: 20px; /* Space between nav items */
 }
 
- .navbar ul li a {
-    display: block; /* Make links take full width */
-    padding: 10px;
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    background-color: #005a9c; /* Slightly lighter blue on hover */
+    border-radius: 4px;
+}
+
+/* Main Content Area */
+main {
+    max-width: 1100px;
+    margin: 20px auto; /* Center content and add space below navbar */
+    padding: 0 20px;
+}
+
+.content-section {
+    background-color: #fff;
+    margin-bottom: 20px; /* Space between sections */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #003e74; /* Match header blue */
+    margin-bottom: 15px;
 }
 
 h1 {
-    font-size: 1.8rem;
+    text-align: center;
+    font-size: 2.2rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Video Placeholder Specific Styling */
+.video-placeholder {
+    background-color: #333; /* Dark background for placeholder */
+    color: #fff;
+    min-height: 315px; /* Default height like a standard embed */
+    width: 100%;
+    max-width: 560px; /* Default width */
+    margin: 20px auto; /* Center the placeholder */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+/* Making embedded videos responsive (optional, but recommended) */
+.video-placeholder iframe,
+.video-placeholder video {
+    display: block; /* Remove extra space below */
+    width: 100%; /* Make it fill the container */
+    max-width: 100%; /* Ensure it doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 16 / 9; /* Common video aspect ratio */
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 30px; /* Space above footer */
+}
+
+/* Basic Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        margin-top: 10px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+        width: 100%;
+        text-align: center;
+    }
+
+     .navbar ul li a {
+        display: block; /* Make links take full width */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
 }
