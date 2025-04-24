@@ -15,8 +15,7 @@ body {
 
 /* Header and Navigation Bar */
 header {
-    /* --- COLOR CHANGED TO RED --- */
-    background-color: #dc3545; /* Example Red */
+    background-color: #003e74; /* Example ICL-like blue */
     color: #fff;
     padding: 1rem 0;
     position: sticky; /* Makes navbar stick to top */
@@ -56,41 +55,14 @@ header {
 
 .navbar ul li a:hover,
 .navbar ul li a:focus {
-    /* --- HOVER COLOR CHANGED TO DARKER RED --- */
-    background-color: #a71d2a; /* Darker red on hover */
+    background-color: #005a9c; /* Slightly lighter blue on hover */
     border-radius: 4px;
 }
-
-/* --- ANIMATION BAR STYLES --- */
-.header-animation-bar {
-    height: 5px; /* Height of the animation bar */
-    width: 100%;
-    /* Create a gradient background */
-    background: linear-gradient(to right, #ff7b7b, #a71d2a, #ff7b7b);
-    background-size: 200% 100%; /* Make gradient wider than the element */
-    /* Apply the animation */
-    animation: animate-gradient-bar 4s linear infinite;
-    /* Note: This bar will scroll with the page content, not stick with the header */
-}
-
-/* --- KEYFRAMES FOR THE GRADIENT ANIMATION --- */
-@keyframes animate-gradient-bar {
-    0% {
-        background-position: 0% 50%; /* Start position */
-    }
-    50% {
-        background-position: 100% 50%; /* Move to the right */
-    }
-    100% {
-        background-position: 0% 50%; /* Return to start */
-    }
-}
-
 
 /* Main Content Area */
 main {
     max-width: 1100px;
-    margin: 20px auto; /* Center content and add space below navbar animation */
+    margin: 20px auto; /* Center content and add space below navbar */
     padding: 0 20px;
 }
 
@@ -103,7 +75,7 @@ main {
 }
 
 h1, h2 {
-    color: #003e74; /* Headings remain original blue (change if needed) */
+    color: #003e74; /* Match header blue */
     margin-bottom: 15px;
 }
 
@@ -190,10 +162,5 @@ footer {
 
     h2 {
         font-size: 1.5rem;
-    }
-
-    /* Ensure animation bar still takes full width */
-    .header-animation-bar {
-       /* No changes needed here typically unless specific adjustments required */
     }
 }
